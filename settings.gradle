@@ -8,6 +8,8 @@ pluginManagement {
         id 'com.android.application' version '7.1.0-alpha04'
         id 'com.android.library' version '7.1.0-alpha04'
         id 'org.jetbrains.kotlin.android' version '1.5.20'
+        id 'androidx.navigation.safeargs.kotlin'
+        id 'androidx.navigation.safeargs'
     }
 }
 dependencyResolutionManagement {

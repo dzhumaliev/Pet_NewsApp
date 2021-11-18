@@ -1,10 +1,10 @@
-package com.io.pet_newsapp.domain.news.entity
+package com.io.pet_newsapp.ui.news.entity
 
-data class News(
-    var articles: List<Articles> = listOf()
+data class NewsUI(
+    var articles: List<ArticlesUI> = listOf()
 )
 
-data class Articles(
+data class ArticlesUI(
     var author: String? = null,
     var title: String? = null,
     var description: String? = null,

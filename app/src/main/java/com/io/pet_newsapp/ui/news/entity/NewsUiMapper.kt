@@ -1,4 +1,4 @@
-package com.io.pet_newsapp.common.models
+package com.io.pet_newsapp.ui.news.entity
 
 import com.io.pet_newsapp.domain.base.mapper.Mapper
 import com.io.pet_newsapp.domain.news.entity.Articles

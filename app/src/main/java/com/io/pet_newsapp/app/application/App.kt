@@ -1,7 +1,10 @@
-package com.io.pet_newsapp
+package com.io.pet_newsapp.app.application
 
 import android.app.Application
-import com.io.pet_newsapp.common.data.modules.*
+import com.io.pet_newsapp.app.di.modules.networkModule
+import com.io.pet_newsapp.app.di.modules.repositoryModule
+import com.io.pet_newsapp.app.di.modules.useCaseModule
+import com.io.pet_newsapp.app.di.modules.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin

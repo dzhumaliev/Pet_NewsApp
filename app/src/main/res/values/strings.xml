@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Pet_NewsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="date_publication">Дата публикации</string>
+    <string name="server">Server</string>
+    <string name="db">DB</string>
 </resources>
