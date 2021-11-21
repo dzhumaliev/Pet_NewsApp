@@ -31,22 +31,15 @@ private fun getLogInterceptor() = HttpLoggingInterceptor().apply { level = sLogL
 
 private fun okHttpClient() = OkHttpClient.Builder()
     .addInterceptor(getLogInterceptor()).apply {
-        setTimeOutToOkHttpClient(
-            this
-        )
+        setTimeOutToOkHttpClient(this)
     }
-//    .addInterceptor(headersInterceptor())
+    .addInterceptor(headersInterceptor())
     .build()
 
 fun headersInterceptor() = Interceptor { chain ->
-    chain.proceed(
-        chain.request().newBuilder()
-//            .addHeader(
-//                "apiKey",
-//                "e0670b0013b245e29427f7f2b9902407"
-//            )
-            .build()
-    )
+    val url = chain.request().url.newBuilder()
+        .addQueryParameter("apiKey", "e0670b0013b245e29427f7f2b9902407").build()
+    chain.proceed(chain.request().newBuilder().url(url).build())
 }
 
 private fun setTimeOutToOkHttpClient(okHttpClientBuilder: OkHttpClient.Builder) =

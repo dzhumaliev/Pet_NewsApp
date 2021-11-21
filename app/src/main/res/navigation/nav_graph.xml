@@ -23,16 +23,23 @@
         android:id="@+id/mainFragment"
         android:name="com.io.pet_newsapp.ui.news.fragments.main.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_newsServerFragment"
             app:destination="@id/newsServerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsDBFragment"
+            app:destination="@id/newsDBFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsServerFragment"
         android:name="com.io.pet_newsapp.ui.news.fragments.server.NewsServerFragment"
         android:label="fragment_news_server"
         tools:layout="@layout/fragment_news_server" />
-
+    <fragment
+        android:id="@+id/newsDBFragment"
+        android:name="com.io.pet_newsapp.ui.news.fragments.db.NewsDBFragment"
+        android:label="fragment_news_d_b"
+        tools:layout="@layout/fragment_news_d_b" />
 
 </navigation>

@@ -3,7 +3,6 @@ package com.io.pet_newsapp.data.news.datasource
 import androidx.annotation.Nullable
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.io.pet_newsapp.data.network.NetworkResponse
 import com.io.pet_newsapp.data.news.entity.NewsMapper
 import com.io.pet_newsapp.data.news.remote.Api
 import com.io.pet_newsapp.domain.base.Failure
@@ -28,7 +27,6 @@ class NewsPagingSource(private var api: Api, val q: String) : PagingSource<Int, 
 
             toLoadResult(response.articles, position)
         } catch (e: Exception) {
-//            LoadResult.Error(Throwable(e.message))
             when (e) {
                 is UnknownHostException, is SocketTimeoutException -> {
                     LoadResult.Error(

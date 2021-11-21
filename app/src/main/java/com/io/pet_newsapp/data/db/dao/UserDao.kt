@@ -1,4 +1,4 @@
-package com.io.pet_newsapp.db.dao
+package com.io.pet_newsapp.data.db.dao
 
 interface UserDao {
 //    @Query("SELECT * FROM news")
@@ -12,5 +12,4 @@ interface UserDao {
 //
 //    @Delete
 //    fun delete(user: NewsModel)
-
 }

@@ -15,6 +15,7 @@
         android:text="@string/server"
         android:textColor="@color/black" />
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_db"
         android:layout_width="match_parent"

@@ -4,29 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".db.NewsDBFragment">
+    tools:context=".ui.news.fragments.db.NewsDBFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbardb"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_back"
-        app:title="Список новостей"
-        app:titleTextColor="@color/black" />
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbardb"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:navigationIcon="@drawable/ic_back"-->
+<!--        app:title="Список новостей"-->
+<!--        app:titleTextColor="@color/black" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_newsDB"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:overScrollMode="never"
-        android:paddingVertical="10dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbardb"
-        tools:listitem="@layout/item_news" />
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/rv_newsDB"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:clipToPadding="false"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:overScrollMode="never"-->
+    <!--        android:paddingVertical="10dp"-->
+    <!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/toolbardb"-->
+    <!--        tools:listitem="@layout/item_news" />-->
+
+
+    <include
+        android:id="@+id/incl_develop"
+        layout="@layout/layout_develop"
+        />
 
     <include
         android:id="@+id/incl_progress"

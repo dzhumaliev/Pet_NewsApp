@@ -89,4 +89,13 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
 
+    def latestFastAdapterRelease = "5.5.1"
+    implementation "com.mikepenz:fastadapter:${latestFastAdapterRelease}"
+
+    implementation "com.mikepenz:fastadapter-extensions-binding:${latestFastAdapterRelease}" // view binding helpers
+    implementation "com.mikepenz:fastadapter-extensions-diff:${latestFastAdapterRelease}" // diff util helpers
+    implementation "com.mikepenz:fastadapter-extensions-paged:${latestFastAdapterRelease}"  // paging support
+
+
+
 }

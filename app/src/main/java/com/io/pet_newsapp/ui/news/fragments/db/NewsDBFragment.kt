@@ -1,4 +1,4 @@
-package com.io.pet_newsapp.db
+package com.io.pet_newsapp.ui.news.fragments.db
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.io.pet_newsapp.R
 import com.io.pet_newsapp.databinding.FragmentNewsDBBinding
-import com.io.pet_newsapp.ui.news.fragments.server.NewsViewModel
 import com.io.pet_newsapp.ui.news.fragments.server.NewsAdapter
+import com.io.pet_newsapp.ui.news.fragments.server.NewsViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -35,14 +35,14 @@ class NewsDBFragment : Fragment(R.layout.fragment_news_d_b) {
     }
 
     private fun initToolbar() {
-        binding.toolbardb.setNavigationOnClickListener {
+        binding.inclDevelop.btnBack.setOnClickListener {
             findNavController().popBackStack()
         }
     }
 
     private fun initAdapter() {
-        adapter = NewsAdapter()
-        binding.rvNewsDB.adapter = adapter
+//        adapter = NewsAdapter()
+//        binding.rvNewsDB.adapter = adapter
     }
 
 

@@ -5,4 +5,6 @@
     <string name="date_publication">Дата публикации</string>
     <string name="server">Server</string>
     <string name="db">DB</string>
+    <string name="server_paging_3">Сервер Paging 3</string>
+    <string name="back">Назад</string>
 </resources>
