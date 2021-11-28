@@ -1,9 +1,9 @@
 package com.io.pet_newsapp.data.network
 
+import com.io.pet_newsapp.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import org.koin.android.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
@@ -14,7 +14,7 @@ private val sLogLevel =
 
 private const val currentUrl = "https://newsapi.org/v2/"
 
-fun createNetworkClient() = retrofitClient(
+fun createNetworkClient() = retrofitClient (
     okHttpClient()
 )
 

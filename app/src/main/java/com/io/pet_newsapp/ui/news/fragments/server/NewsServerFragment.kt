@@ -5,23 +5,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.paging.CombinedLoadStates
 import androidx.paging.LoadState
 import com.io.pet_newsapp.R
 import com.io.pet_newsapp.databinding.FragmentNewsServerBinding
 import com.io.pet_newsapp.domain.base.Failure
 import com.io.pet_newsapp.ui.extension.collectIn
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class NewsServerFragment : Fragment(R.layout.fragment_news_server) {
 
     private var _binding: FragmentNewsServerBinding? = null
     private val binding: FragmentNewsServerBinding
         get() = _binding!!
 
-    private val viewModel: NewsViewModel by viewModel()
+    private val viewModel: NewsViewModel by lazy {
+        val viewModel: NewsViewModel by viewModels()
+//        viewModel.q = "tesla"
+        viewModel
+    }
+
     private var adapter: NewsAdapter? = null
 
     override fun onCreateView(

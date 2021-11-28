@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Pet_NewsApp"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.io.pet_newsapp.ui.news.activity.MainActivity"
+            android:name=".ui.news.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

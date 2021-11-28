@@ -3,12 +3,13 @@ package com.io.pet_newsapp.ui.news.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.io.pet_newsapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
     }
 }

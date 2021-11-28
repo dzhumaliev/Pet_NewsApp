@@ -1,5 +1,6 @@
 package com.io.pet_newsapp.ui.news.fragments.server
 
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
@@ -9,17 +10,16 @@ import com.io.pet_newsapp.domain.base.Failure
 import com.io.pet_newsapp.domain.news.usecase.NewsUseCase
 import com.io.pet_newsapp.ui.news.entity.ArticlesUI
 import com.io.pet_newsapp.ui.news.entity.NewsUiMapper
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class NewsViewModel(
+@HiltViewModel
+class NewsViewModel @Inject constructor(
     private val useCase: NewsUseCase
-
 ) : ViewModel() {
-
-//    private val _loadingState: MutableLiveData<Boolean> = MutableLiveData()
-//    val loadingState: LiveData<Boolean> = _loadingState
 
     private val _news =
         MutableStateFlow<PagingData<ArticlesUI>>(PagingData.empty())

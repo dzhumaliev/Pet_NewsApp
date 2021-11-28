@@ -7,15 +7,19 @@ import com.io.pet_newsapp.data.news.entity.NewsMapper
 import com.io.pet_newsapp.data.news.remote.Api
 import com.io.pet_newsapp.domain.base.Failure
 import com.io.pet_newsapp.domain.news.entity.Articles
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.util.concurrent.TimeoutException
 
-private const val STARTING_PAGE_INDEX = 1
-private const val PAGE_SIZE = 20
 
-class NewsPagingSource(private var api: Api, val q: String) : PagingSource<Int, Articles>() {
-
+class NewsPagingSource @AssistedInject constructor(
+    private var api: Api,
+    @Assisted("q") private val q: String
+) :
+    PagingSource<Int, Articles>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Articles> {
         val position = params.key ?: STARTING_PAGE_INDEX
@@ -64,5 +68,14 @@ class NewsPagingSource(private var api: Api, val q: String) : PagingSource<Int, 
         )
     }
 
+    @AssistedFactory
+    interface Factory {
+        fun create(@Assisted("q") q: String): NewsPagingSource
+    }
+
+    companion object {
+        private const val STARTING_PAGE_INDEX = 1
+        private const val PAGE_SIZE = 20
+    }
 
 }

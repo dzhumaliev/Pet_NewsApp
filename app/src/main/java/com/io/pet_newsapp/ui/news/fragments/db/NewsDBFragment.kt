@@ -5,21 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.io.pet_newsapp.R
 import com.io.pet_newsapp.databinding.FragmentNewsDBBinding
 import com.io.pet_newsapp.ui.news.fragments.server.NewsAdapter
 import com.io.pet_newsapp.ui.news.fragments.server.NewsViewModel
-import org.koin.androidx.viewmodel.ext.android.viewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class NewsDBFragment : Fragment(R.layout.fragment_news_d_b) {
 
     private var _binding: FragmentNewsDBBinding? = null
     private val binding: FragmentNewsDBBinding
         get() = _binding!!
 
-    private val viewModel: NewsViewModel by viewModel()
+    private val viewModel: NewsViewModel by viewModels()
     private var adapter: NewsAdapter? = null
 
     override fun onCreateView(
