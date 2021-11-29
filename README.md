@@ -3,7 +3,7 @@
 - MVVM
 - Navigation Component
 - Coroutines
-- Koin
+- Hilt
 - Flow
 - View Binding
 - OkHttp3 - Network interceptor
