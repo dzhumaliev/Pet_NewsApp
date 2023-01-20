@@ -5,6 +5,7 @@ plugins {
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
+    id("kotlin-android")
 }
 
 android {
@@ -69,6 +70,14 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
+    androidTestImplementation("com.kaspersky.android-components:kaspresso:1.4.0")
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
+
+//    androidTestImplementation("com.agoda.kakao:kakao:2.3.4")
+
+//    testImplementation ("org.mockito:mockito-core:2.24.5")
+//    androidTestImplementation ("org.mockito:mockito-android:2.24.5")
+
 
     // navigation component
     val nav_version = "2.3.5"
@@ -111,5 +120,4 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:$hilt_version")
 
     implementation("it.czerwinski.android.hilt:hilt-extensions:1.2.0")
-
 }

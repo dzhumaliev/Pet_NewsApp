@@ -40,8 +40,6 @@ class NewsViewModel @Inject constructor(
             .cachedIn(viewModelScope)
 
     private fun getNews() = viewModelScope.launch {
-
-
         viewModelScope.launch {
             _news.value = getProductsByCoroutinePath().first().map {
                 NewsUiMapper().mapLeftToRight(it)
